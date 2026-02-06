@@ -205,3 +205,9 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+
+
+# Added
+project_generator.py
+run_generator.sh
+requirments.txt
