@@ -1,0 +1,46 @@
+# To-Do List Application
+
+to_do_list = []
+
+def add_task(task):
+    global to_do_list
+    to_do_list.append(task)
+    print(f"Task '{task}' added!")
+
+def remove_task(task):
+    global to_do_list
+    if task in to_do_list:
+        to_do_list.remove(task)
+        print(f"Task '{task}' removed!")
+    else:
+        print(f"Task '{task}' not found!")
+
+def display_tasks():
+    global to_do_list
+    if len(to_do_list) == 0:
+        print("No tasks available.")
+    else:
+        for task in to_do_list:
+            print(task)
+
+if __name__ == '__main__':
+    while True:
+        print("\n1. Add Task")
+        print("2. Remove Task")
+        print("3. Display Tasks")
+        print("4. Exit")
+        choice = input("Choose an option: ")
+        
+        if choice == "1":
+            task = input("Enter a new task: ")
+            add_task(task)
+        elif choice == "2":
+            task = input("Enter the task to remove: ")
+            remove_task(task)
+        elif choice == "3":
+            display_tasks()
+        elif choice == "4":
+            print("Exiting...")
+            break
+        else:
+            print("Invalid option. Please choose again.")
